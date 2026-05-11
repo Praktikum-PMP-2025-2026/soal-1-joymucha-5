@@ -20,6 +20,7 @@ int main(){
     }
 
     int max = 0;
+    int degreemax = 0;
     int isolated = 0;
     int Isolated[100];
     int nol = 0;
@@ -30,10 +31,10 @@ int main(){
             if(matrix[i][j] == 1){
                 degree = degree + 1;
             }
-            if(max < degree){
-                max = degree;
-            }
-
+        }
+        if(degreemax < degree){
+            degreemax = degree;
+            max = i;
         }
         printf("DEGREE %d %d\n", i, degree);
     }
