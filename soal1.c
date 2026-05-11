@@ -1,3 +1,12 @@
+/** EL2008 Praktikum Pemecahan Masalah dengan Pemrograman 2025/2026
+* Modul : 5 - Foundation of Algortihm
+* Hari dan Tanggal : Rabu, 6 Mei 2026
+* Nama File : matrix.c
+* Pembuat : Joachim (13224034)
+* Deskripsi: cari degree masing masing vertex, max vertex, dan isolated berapa
+*/
+
+
 #include<stdio.h>
 
 int main(){
@@ -43,17 +52,17 @@ int main(){
             Isolated[k] = i;
             k++;
             isolated++;
-            printf("ISOLATED");
 
         }
     }
+    printf("ISOLATED");
 
     for(int x =0; x<isolated; x++){
         printf(" %d", Isolated[x]);
     }
     
     if(isolated == 0){
-        printf("ISOLATED NONE");
+        printf(" NONE");
     }
 }
 
