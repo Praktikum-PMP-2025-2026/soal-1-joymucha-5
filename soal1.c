@@ -11,7 +11,7 @@ int main(){
     }
 
     int max = 0;
-    int isolated;
+    int isolated = 0;
     int nol = 0;
 
     for ( i=0; i<N; i++){
@@ -38,13 +38,13 @@ int main(){
             }
         }
         if(nol == N){
+            isolated++;
             printf("ISOLATED %d", i);
         }
     }    
     
-    if(nol == 0){
+    if(isolated == 0){
         printf("ISOLATED NONE");
-
     }
 }
 
@@ -56,4 +56,6 @@ int main(){
 1 0 1 0
 1 1 0 0
 0 0 0 0
+
+2 0 1 1 0
 */
