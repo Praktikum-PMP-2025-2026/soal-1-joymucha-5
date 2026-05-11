@@ -12,6 +12,7 @@ int main(){
 
     int max = 0;
     int isolated = 0;
+    int Isolated[100];
     int nol = 0;
 
     for ( i=0; i<N; i++){
@@ -30,6 +31,7 @@ int main(){
 
     printf("MAX_VERTEX %d\n", max);
 
+    int k =0;
     for( i = 0; i<N; i++){
         nol = 0;
         for( j = 0; j<N; j++){
@@ -38,10 +40,17 @@ int main(){
             }
         }
         if(nol == N){
+            Isolated[k] = i;
+            k++;
             isolated++;
-            printf("ISOLATED %d", i);
+            printf("ISOLATED");
+
         }
-    }    
+    }
+
+    for(int x =0; x<isolated; x++){
+        printf(" %d", Isolated[x]);
+    }
     
     if(isolated == 0){
         printf("ISOLATED NONE");
@@ -58,4 +67,6 @@ int main(){
 0 0 0 0
 
 2 0 1 1 0
+
+3 0 0 0 0 0 0 0 0 0
 */
